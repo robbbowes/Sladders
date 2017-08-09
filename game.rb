@@ -24,9 +24,22 @@ class Game
   end
 
   def take_turn(player)
+    print "It's #{player.name}'s turn."
+    gets
     die_roll = @die.roll()
-    move(die_roll)
-
+    puts "#{player.name} rolled a #{die_roll}."
+    player.move(die_roll)
+    sladder = board.check_tile(player.position)
+    if sladder != nil then
+      if sladder.jaguar? then
+        puts "Oh no! You've been eaten by a Jaguar! Bye-bye!"
+        remove_player(player)
+      end
+      puts "Oh no! You've been eaten by a Snake!" if sladder.snake?
+      puts "Oh yes! You've been eaten by a Ladder!" if sladder.ladder?
+      player.move(sladder.offset)
+    end
+    puts "#{player.name} is now at position #{player.position}."
   end
 
   def yield_commencement()
