@@ -27,4 +27,9 @@ class PlayerTest < MiniTest::Test
     assert_equal(10, @player.position)
   end
 
+  # def test_negative_position_remove
+  #   @player.move(-100)
+  #   assert_equal()
+  # end
+
 end

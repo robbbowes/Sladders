@@ -6,10 +6,13 @@ class Player
     @name = name
     @position = position
     @ai = ai
+    # @turn_order_roll = ???
   end
 
   def move(offset)
     @position += offset
   end
+
+
 
 end
