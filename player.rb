@@ -13,6 +13,9 @@ class Player
     @position += offset
   end
 
-
+  def has_won?
+    return true if @position >= 100
+    return false
+  end
 
 end
