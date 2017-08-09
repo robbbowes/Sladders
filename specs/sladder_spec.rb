@@ -8,9 +8,11 @@ class SladderTest < MiniTest::Test
 
   def setup
 
-    @sladder = Sladder.new()
+
 
   end
+
+
 
 
 

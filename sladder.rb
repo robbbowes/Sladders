@@ -1,10 +1,14 @@
 class Sladder
 
-  def initialize(mouth, arse)
+  attr_reader(:mouth, :arse)
+
+  def initialize(mouth = nil, arse = nil)
     @mouth = mouth
     @arse = arse
   end
 
+  # def snake?()
 
+  # def offset()
 
 end
